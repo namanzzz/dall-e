@@ -22,7 +22,7 @@ const CreatePost = () => {
       if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch("http://localhost:8080/api/v1/dalle", 
+        const response = await fetch("https://dall-e-rqg2.onrender.com/api/v1/dalle", 
         {
           method: 'POST',
           headers: {
@@ -52,7 +52,7 @@ const CreatePost = () => {
         setLoading(true);
       
       try {
-        const response = await fetch('http://localhost:8080/api/v1/post',{
+        const response = await fetch('https://dall-e-rqg2.onrender.com/api/v1/post',{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ const CreatePost = () => {
             <p className='
             mt-2 text-[#666e75] text-[16px] max-w-[500px]
             '> Create imaginative and visually stunning images through 
-            DALL-E AI and share them to the community
+            DALL.E 2 AI system and share them to the community
             </p>
           </div>
           <form className='mt-16 max-w-3xl' onSubmit={handleSubmit}>
@@ -114,7 +114,7 @@ const CreatePost = () => {
                     LabelName="Prompt"
                     type="text"
                     name="prompt"
-                    placeholder="A comic book cover of a superhero wearing headphones"
+                    placeholder="A photograph of a cyborg exploring Tokyo at night, lomography"
                     value = {form.prompt}
                     handleChange = {handleChange}
                     isSurpiseMe
@@ -154,7 +154,7 @@ const CreatePost = () => {
 
 
              <div className="mt-10">
-             <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
+             <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image of your choice, feel free to share it with others in the community **</p>
              
              <button
                type="submit"
